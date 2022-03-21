@@ -1,5 +1,6 @@
 from sys import stdin
 
+# N만 큼 Q를 미리 만들고 front와 rear을 이용하여 Q 구현
 N = int(stdin.readline())
 Q = [0] * N
 front = rear = 0

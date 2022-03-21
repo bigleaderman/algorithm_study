@@ -1,6 +1,7 @@
 from sys import stdin
 from collections import deque
 
+# timelimit error 떄문에 deque 사용
 N = int(stdin.readline())
 Q = deque()
 for _ in range(N):
