@@ -1,0 +1,13 @@
+-- 코드를 입력하세요
+-- 코드와 각 행의 값과 양을 곱한것은 합을 나타낸다
+SELECT A.PRODUCT_CODE, SUM(A.PRICE * B.SALES_AMOUNT) AS SALES
+-- 테이블 A와
+FROM PRODUCT A
+-- 테이블 B를
+JOIN OFFLINE_SALE B 
+-- PRODUCT_ID 기준으로 합친다
+ON A.PRODUCT_ID = B.PRODUCT_ID
+-- PRODUCT_CODE를 기준으로
+GROUP BY A.PRODUCT_CODE
+-- 판매값이 크고 만약 같다면 CODE가 오름차순인 것 부터
+ORDER BY SALES DESC, A.PRODUCT_CODE ASC
